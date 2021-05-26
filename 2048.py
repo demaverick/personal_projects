@@ -1,8 +1,12 @@
 import numpy as np
 import random
 
+# Initializing the board with Zeros
 board = np.zeros((4,4))
 
+# Initializing a list which stores all the (i,j) coordinates in the board
+# Which can be used to check what every block contains - Filled or not filled with a number
+# So the Base condition would be if the tuple is empty the Game is over.
 tuplelist = []
 for i in range(4):
     for j in range(4):
