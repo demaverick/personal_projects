@@ -1,5 +1,6 @@
 from typing import Text
 from graphics import *
+import random
 
 def main():
     win = GraphWin("2048", 407,407)
@@ -16,10 +17,29 @@ def main():
             # cir = Circle(center, 20)
             # cir.setFill(color_rgb(255,255,255))
             # cir.draw(win)
-            text = Text(center, "0")
+            num = random.randint(0,10)
+            text = Text(center, str(num))
             text.setTextColor(color_rgb(255,255,255))
             text.draw(win)
-    win.getMouse()
-    win.close()
-
+    inp = win.getKey()
+    print(inp)
+    if inp == 'Left':
+        print("left pressed")
+        win.close()
+        main()
+    elif inp == "Right":
+        print("Right Pressed")
+        win.close()
+        main()
+    elif inp == "Up":
+        print("Up pressed")
+        win.close()
+        main()
+    elif inp == "Down":
+        print("Down pressed")
+        win.close()
+        main()
+    else:
+        print("Exiting")
+        win.close()
 main()
